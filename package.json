@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open":"cypress open"
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/tiagoflor/test-ebac-ui#readme",
   "devDependencies": {
+    "@faker-js/faker": "^7.4.0",
     "cypress": "^10.4.0"
   }
 }
