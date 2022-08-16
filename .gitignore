@@ -104,4 +104,3 @@ dist
 .tern-port
 
 #ignorar o login portal
-.login_portal.cy.js
