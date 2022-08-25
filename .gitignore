@@ -103,4 +103,4 @@ dist
 # TernJS port file
 .tern-port
 
-#ignorar o login portal
+#ignorar um arquivo
