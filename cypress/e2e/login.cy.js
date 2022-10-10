@@ -1,5 +1,5 @@
 //<reference types ="cypress" />
-
+/*
 context('Funcionalidade Login', () => {
    //cenário caminho feliz
     it('Deve fazer login com sucesso', () => {
@@ -31,15 +31,16 @@ context('Funcionalidade Login', () => {
       cy.get('.woocommerce-form > .button').click()      
       cy.get('.woocommerce-error').should('contain' , 'Erro: A senha fornecida para o e-mail aluno_ebac@teste.com está incorreta. Perdeu a senha?')
     }) 
-})
+
+}) */
 
 
 
-/* nova forma de fazer é assim:
+ //nova forma de fazer é assim:
 
 describe('Funcionalidade Login', () => {
    //cenário caminho feliz
-    //cenário caminho feliz
+    
     it('Deve fazer login com sucesso', () => {
       cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
       cy.get('#username').type('aluno_ebac@teste.com')
@@ -70,4 +71,4 @@ describe('Funcionalidade Login', () => {
       cy.get('.woocommerce-error').should('contain' , 'Erro: A senha fornecida para o e-mail aluno_ebac@teste.com está incorreta. Perdeu a senha?')
     }) 
 
-})*/
+})
