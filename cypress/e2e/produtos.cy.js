@@ -8,13 +8,13 @@ describe('Funcionalidade Página de produtos', () => {
 
     it('Deve seleciona um produto da lista', () => {
         cy.get('[class="product-block grid"]') //utilizando dessa forma você seleciona a classe que quer usar
-        //.first()   //metodo que seleciona o primeiro da lista
-        //.last() // metodo que seleciona o ultimo da lista
-        //.eq(2) // metodo que seleciona a posição de um item da lista
-        .contains('Ariel Roll Sleeve Sweatshirt').click()  //seleciona uma palavra chave (caso o elemento seja clicavel)
+            //.first()   //metodo que seleciona o primeiro da lista
+            //.last() // metodo que seleciona o ultimo da lista
+            //.eq(2) // metodo que seleciona a posição de um item da lista
+            .contains('Ariel Roll Sleeve Sweatshirt').click()  //seleciona uma palavra chave (caso o elemento seja clicavel)
     });
 
-    it.only('Deve adicionar um produto ao carrinho', () => {
+    it('Deve adicionar um produto ao carrinho', () => {
         var quantidade = 15  //declarando uma váriavel é só passar os parâmetros conforme exemplo abaixo
 
         cy.get('[class="product-block grid"]')
@@ -36,5 +36,10 @@ describe('Funcionalidade Página de produtos', () => {
         cy.get('.woocommerce-message').should('assert', quantidade + ' x “Ajax Full-Zip Sweatshirt” foram adicionados no seu carrinho.')
 
     });
+
     
+    it.only('Deve adicionar produtos ao carrinho - Usando Comando Customizado', () => {
+        cy.addProdutos('Ajax Full-Zip Sweatshirt', 3)
+    }); //             (nome do produto, quantidade)
+
 });

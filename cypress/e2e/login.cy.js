@@ -55,7 +55,7 @@ describe('Funcionalidade Login', () => {
     //cenário caminho negativo
     it('Deve exibir uma mensagem de erro ao inserir usuario inválido', () => {
       cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
-      cy.get('#username').type('alun_ebac@teste.com')
+      cy.get('#username').type('alun_ebac@teste.com',{log: false})
       cy.get('#password').type('teste@teste.com')
 
       cy.get('.woocommerce-form > .button').click()      
@@ -66,7 +66,7 @@ describe('Funcionalidade Login', () => {
     it('Deve exibir uma mensagem de erro ao inserir senha inválido', () => {
       cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
       cy.get('#username').type('aluno_ebac@teste.com')
-      cy.get('#password').type('test@teste.com')
+      cy.get('#password').type('test@teste.com',{log: false})
       cy.get('.woocommerce-form > .button').click()      
       cy.get('.woocommerce-error').should('contain' , 'Erro: A senha fornecida para o e-mail aluno_ebac@teste.com está incorreta. Perdeu a senha?')
     }) 
